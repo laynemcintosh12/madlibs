@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+</head>
+<body>
+    <h1>MadLibs</h1>
+    <h2>Fill out this form to create your own Madlib!</h2>
+    <form action="/story">
+        {% for input in form_var %}
+        <label for="{{ input }}">{{input}}</label>
+            <input id="{{ input }}" name="{{ input }}"><br>
+        {% endfor %}
+        <button>Generate Story</button>
+    </form>
+</body>
+</html>
